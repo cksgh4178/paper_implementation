@@ -6,4 +6,6 @@
  
     Reasoning module : 추론을 할 수 있는 신경망 구조에 흥미를 느껴 공부해보고 구현
   
-2.
+2. Learning to Compare : Relation Network for Few-Shot Learning
+    
+    Relation Network를 사용한 Metric 기반 Few-shot learning 네트워크
