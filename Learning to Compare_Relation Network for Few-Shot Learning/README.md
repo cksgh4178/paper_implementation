@@ -10,7 +10,7 @@
 
 #### Few-Shot Learning (FSL) 이란?
 
-<img src="https://www.borealisai.com/media/filer_public_thumbnails/filer_public/50/6a/506a0057-93f9-4d7a-9f91-14c4f0c8339f/t2_figure1.png__3000x1372_q85_subject_location-1500%2C686_subsampling-2.png" width="900" height="500">
+![그림](https://www.borealisai.com/media/filer_public_thumbnails/filer_public/50/6a/506a0057-93f9-4d7a-9f91-14c4f0c8339f/t2_figure1.png__3000x1372_q85_subject_location-1500%2C686_subsampling-2.png)
 
 * 보통 N-way K-shot 문제로 불리며 N개의 클래스에서 각각 K개만큼의 sample을 보고 query set의 class 를 예측하는 문제
 * 논문에서는 **5-way 1-shot (19 query)**, **5-way 5-shot(15 query)**, **20-way 1shot (10 query)**, **20-way 5-shot(5 query)** 를 실험
@@ -20,7 +20,7 @@
 
 #### 모델 구조
 
-<center><img src="https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/bfe284e4338e62f0a61bb33398353efd687f206f/4-Figure1-1.png" width = "650" height="350"></center>
+![그림](https://user-images.githubusercontent.com/23060537/144984349-8d45c816-5ccf-4d2a-9fe1-b77a0e987c6f.png)
 
 * embedding module로 sample 과 query의 특징을 추출	
 
@@ -29,19 +29,22 @@
 * relation score로 계산하기 때문에 일반적인 cross entropy loss 가 아니라 MSE loss 사용
 
 * relation score 
+
   ![figure](https://latex.codecogs.com/png.latex?%5Cinline%20%5Clarge%20r_%7Bi%2C%20j%7D%20%3D%20g_%7B%5Cphi%7D%28%5Cmathbb%7BC%7D%28f_%7B%5Cvarphi%7D%28x_i%29%2C%20f_%7B%5Cvarphi%7D%28x_j%29%29%29%2C%20%5Cqquad%20i%20%3D%201%2C%202%2C%20%5Cdots%2C%20%5Cmathbb%7BC%7D)
 
 * objective function
+
 ![그림](https://latex.codecogs.com/png.latex?%5Cinline%20%5Clarge%20%5Cvarphi%2C%20%5Cphi%20%5Cleftarrow%20%5Cunderset%7B%5Cvarphi%2C%20%5Cphi%7D%7Bargmin%7D%20%5Csum_%7Bi%3D1%7D%5Em%20%5Csum_%7Bj%3D1%7D%5En%20%28r_%7Bi%2Cj%7D-1%28y_i%20%3D%3D%20y_j%29%29%5E2)
 
 * 모델 세부 구조
 
-  ![그림](https://d3i71xaburhd42.cloudfront.net/bfe284e4338e62f0a61bb33398353efd687f206f/5-Figure2-1.png)
+ ![그림](https://user-images.githubusercontent.com/23060537/144984416-2c1ef5f9-3b18-4ed2-b426-bdc5c4a966b0.png)
+  
 <br>
 
 * 모델 성능 (논문)
 
-![그림](https://d3i71xaburhd42.cloudfront.net/bfe284e4338e62f0a61bb33398353efd687f206f/6-Table1-1.png)
+![6-Table1-1](https://user-images.githubusercontent.com/23060537/144984480-1e9878a2-65ad-4536-93fc-31cb2311cc2c.png)
 <br>
 
 #### Metric based approach
